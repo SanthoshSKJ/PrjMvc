@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My NEW PROJECT</title>
+    @Styles.Render("~/Content/css")
+    @*Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <div class="bg-warning p-2 text-white">WELCOME </div>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+         <div class ="container-fluid justify-content-start">
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <div>
+                     <nav class="navbar navbar-light bg-info" >
+                         <div class="container-fluid">
+                             <a class="navbar-brand" href="~/Home/Index">
+                                 <img src="~/images/Logo.png" alt="" width="40" height="30" class="d-inline-block align-text-top">
+                               SK's PET SHOP
+                                 </a>
+                         </div>
+                     </nav>
+                 </div>
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                     <li class="nav-item">
+                         <a class="nav-link active" aria-current="page" href="~/Home/Index">Home</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="~/Home/About">About</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="~/Home/Contact">Contact</a>
+                     </li>
+                 </ul>
+             </div>
+            </div>
+
+
+         
+</nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Sk's Pet Shop. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    @*Scripts.Render("~/bundles/jquery")*@
+    @Scripts.Render("~/content/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        var myCarousel = document.querySelector('#myCarousel')
+        var Carousel = new bootstrap.Carousel(myCarousel, { interval: 2000, wrap=false })
+    </script>
+</body>
+</html>
